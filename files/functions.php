@@ -42,7 +42,7 @@ function webspeed_person_data() {
 		echo '<li class="k-mail"><span class="k-label">';
 		echo svg_url(2);
 		echo '</span><span class="k-info">';
-		if (get_field('klik_tekst_email')):
+		if (get_field('klik_tekst_email_sec')):
 			echo '<a href="mailto:' . get_field('email_sec') . '">' . get_field('klik_tekst_email_sec') . '</a>';
 		else:
 			echo '<a href="mailto:' . get_field('email_sec') . '">' . $mail_sec . '</a>';
