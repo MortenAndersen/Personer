@@ -26,14 +26,26 @@ function webspeed_person_data() {
 	}
 
 	if (get_field('email')) {
-		$hh = get_field('email');
+		$mail = get_field('email');
 		echo '<li class="k-mail"><span class="k-label">';
 		echo svg_url(2);
 		echo '</span><span class="k-info">';
 		if (get_field('klik_tekst_email')):
 			echo '<a href="mailto:' . get_field('email') . '">' . get_field('klik_tekst_email') . '</a>';
 		else:
-			echo '<a href="mailto:' . get_field('email') . '">' . $hh . '</a>';
+			echo '<a href="mailto:' . get_field('email') . '">' . $mail . '</a>';
+		endif;
+		echo '</span></li>';
+	}
+	if (get_field('email_sec')) {
+		$mail_sec = get_field('email_sec');
+		echo '<li class="k-mail"><span class="k-label">';
+		echo svg_url(2);
+		echo '</span><span class="k-info">';
+		if (get_field('klik_tekst_email')):
+			echo '<a href="mailto:' . get_field('email_sec') . '">' . get_field('klik_tekst_email_sec') . '</a>';
+		else:
+			echo '<a href="mailto:' . get_field('email_sec') . '">' . $mail_sec . '</a>';
 		endif;
 		echo '</span></li>';
 	}
