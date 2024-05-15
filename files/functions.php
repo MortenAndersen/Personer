@@ -26,26 +26,14 @@ function webspeed_person_data() {
 	}
 
 	if (get_field('email')) {
-		$mail = get_field('email');
+		$hh = get_field('email');
 		echo '<li class="k-mail"><span class="k-label">';
 		echo svg_url(2);
 		echo '</span><span class="k-info">';
 		if (get_field('klik_tekst_email')):
 			echo '<a href="mailto:' . get_field('email') . '">' . get_field('klik_tekst_email') . '</a>';
 		else:
-			echo '<a href="mailto:' . get_field('email') . '">' . $mail . '</a>';
-		endif;
-		echo '</span></li>';
-	}
-	if (get_field('email_sec')) {
-		$mail_sec = get_field('email_sec');
-		echo '<li class="k-mail"><span class="k-label">';
-		echo svg_url(2);
-		echo '</span><span class="k-info">';
-		if (get_field('klik_tekst_email_sec')):
-			echo '<a href="mailto:' . get_field('email_sec') . '">' . get_field('klik_tekst_email_sec') . '</a>';
-		else:
-			echo '<a href="mailto:' . get_field('email_sec') . '">' . $mail_sec . '</a>';
+			echo '<a href="mailto:' . get_field('email') . '">' . $hh . '</a>';
 		endif;
 		echo '</span></li>';
 	}
@@ -138,10 +126,10 @@ function webspeed_person_img() {
 function webspeed_person_titel() {
 	$content = get_the_content();
 	if (!empty($content)):
-		echo '<h4 class="person-titel"><a href="' . get_the_permalink() . '">';
+		echo '<p class="person-titel"><a href="' . get_the_permalink() . '">';
 		the_title();
-		echo '</a></h4>';
+		echo '</a></p>';
 	else:
-		the_title('<h4 class="person-titel">', '</h4>');
+		the_title('<p class="person-titel">', '</p>');
 	endif;
 }
