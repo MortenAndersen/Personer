@@ -74,7 +74,7 @@ function webspeed_personer($atts) {
 
 		echo '<div class="personer-shortcode grid ' . $class . $grid_class . $gap_class . '">';
 		while ($loop->have_posts()): $loop->the_post();
-			echo '<div id="post-id-' . get_the_ID() . '" class="person-item">';
+			echo '<div id="post-id-' . get_the_ID() . '" class="person-item item-bg">';
 			webspeed_person_img();
 			echo '<div class="person-body">';
 

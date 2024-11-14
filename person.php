@@ -2,11 +2,11 @@
 /*
 Plugin Name: Personer
 Version: 1.2
-Plugin URI: https://www.web.dk
+Plugin URI: https://www.hjemmesider.dk
 Description: Personer. Requirements: Advanced Custom Fields PRO
 Author: Morten Andersen
 Text Domain: websepeed-personer-domain
-Author URI: https://www.web.dk
+Author URI: https://www.hjemmesider.dk
  */
 
 // Files
