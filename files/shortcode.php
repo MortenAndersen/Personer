@@ -13,14 +13,16 @@ function webspeed_personer($atts) {
 		'class' => 'no-class',
 		'number' => '999',
 		'offset' => '0',
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
 	), $atts));
 
 	if (!empty($type)) {
 
 		$loop = new WP_Query(array(
 			'post_type' => 'person',
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
+			'orderby' => $orderby,
+			'order' => $order,
 			'posts_per_page' => -1,
 			'tax_query' => array(
 				array(
@@ -35,8 +37,8 @@ function webspeed_personer($atts) {
 	} else {
 		$loop = new WP_Query(array(
 			'post_type' => 'person',
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
+			'orderby' => $orderby,
+			'order' => $order,
 			'posts_per_page' => $number,
 			'offset' => $offset,
 		)
